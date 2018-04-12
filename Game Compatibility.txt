@@ -1,0 +1,25 @@
+Game Compability Sheet
+
+Console: NES
+Game: Legend of Zelda
+Compatibility: 7/10
+Summary: Cardinal movement works perfectly, as expected, but as the game moves you on a grid in that game, diagnals are a bit of an issue (Very jerky)
+Possible solution will be to pulse both UP + LEFT ( or whatever direction you're going ) at the same time, but this will require a bit of a rework on how the controller values are polled / updated
+
+Console: NES
+Game: Super Mario Bros.
+Compatibility: 9/10
+Summary: Movement works about as expected, with minor graphic glitching at very low speeds. I suspect that move side scrollers will work fairly well with this system due to not really
+needing to go in multiple directions at a time. 
+
+Console: NES
+Game: 1942
+Compatibility: 10/10
+Summary: Everything works as expected. No glitching at low speeds.
+
+Console: NDS
+Game: Super Mario 64: DS
+Compatibility: 9/10
+Summary: Works better than I could have hoped. It seems that any games that continue to move you after the key has been released are perfect for this system as it masks and smooths out the pulses
+As such, it feels very close to being able to move in 360 degrees at any speed fluidly. Only issues are some minor graphical glitches at low speeds, and speed at which you can turn in the opposite direction
+which makes the side cartwheel jump a bit tricky to pull off consistently 
