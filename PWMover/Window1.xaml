@@ -1,17 +1,19 @@
-﻿<Window x:Class="PWMover.Window1"
+﻿<Controls:MetroWindow
+    xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls" x:Class="WpfApplication.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:PWMover"
-        mc:Ignorable="d"
-        Title="PWMover" Height="450" Width="800">
+        Title="PWMove" 
+        Height="450" 
+        Width="800" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225">
+
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Label x:Name="label" Content="Welcome to the GUI!&#xD;&#xA;This is the first implementation, so there isn't anything here yet&#xD;&#xA;But there will be, damnit." HorizontalAlignment="Left" Margin="219,10,0,0" VerticalAlignment="Top" Height="135" Width="352"/>
+        <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="145" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="431" VerticalAlignment="Top" Margin="0,0,0,-10"/>
+        <ProgressBar x:Name="XPlus" HorizontalAlignment="Left" Height="25" Margin="150,5,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" IsIndeterminate="True" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="XMinus" HorizontalAlignment="Left" Height="25" Margin="150,35,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="YPlus" HorizontalAlignment="Left" Height="26" Margin="150,64,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="YMinus" HorizontalAlignment="Left" Height="24" Margin="150,95,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
 
     </Grid>
-</Window>
+</Controls:MetroWindow>

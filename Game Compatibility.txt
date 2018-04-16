@@ -23,3 +23,19 @@ Compatibility: 9/10
 Summary: Works better than I could have hoped. It seems that any games that continue to move you after the key has been released are perfect for this system as it masks and smooths out the pulses
 As such, it feels very close to being able to move in 360 degrees at any speed fluidly. Only issues are some minor graphical glitches at low speeds, and speed at which you can turn in the opposite direction
 which makes the side cartwheel jump a bit tricky to pull off consistently 
+
+Console: SNES
+Game: Legend of Zelda: Link to the Past
+Compatibility: 5/10
+Summary: Suffers from the same problems as zelda 1, however I know this can be fixed with some tweaking (Adding multiple "Modes") that will allow for two keys to be pulsed at the same time.
+Might be tricky but I'll put it on the project tracker
+
+Console: SNES
+Game: Donkey Kong Country
+Compatibility: 10/10
+Works perfectly well. No glitching even at angles and slow speeds
+
+Console: SNES
+Game: F-Zero
+Compatibility: 7/10
+Works, but the speed changes a bit too quickly to have it be useful, feels too twitchy. Can probably be fixed once I implement variable pulse lengths. 
