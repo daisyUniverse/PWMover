@@ -1,7 +1,5 @@
-﻿using MahApps.Metro;
-using SharpDX.XInput;
+﻿using SharpDX.XInput;
 using System;
-using System.Windows;
 using System.Windows.Forms.Integration;
 using WindowsInput;
 using WindowsInput.Native;
