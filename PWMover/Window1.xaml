@@ -21,7 +21,7 @@
         <Label Content="Left Thumbstick" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
         <Label Content="Right Thumbstick" HorizontalAlignment="Left" Margin="19,162,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
         <CheckBox x:Name="LeftDisable" Content="Disable" HorizontalAlignment="Left" Margin="151,16,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2"/>
-        <CheckBox x:Name="RightDisable" Content="Disable" HorizontalAlignment="Left" Margin="150,168,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2"/>
+        <CheckBox x:Name="RightDisable" Content="Disable" HorizontalAlignment="Left" Margin="150,168,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2" IsChecked="True"/>
 
     </Grid>
 </Controls:MetroWindow>
