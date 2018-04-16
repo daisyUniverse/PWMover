@@ -20,5 +20,5 @@ Works by translating the analogue values of your gamepad into pulses of various 
 You can find the current release in the Releases tab
 
 Made by Elisha Shaddock or eli#8000 on discord
-[buy me a coffee?](paypal.me/elidev)
+[buy me a coffee?](http://paypal.me/elidev)
 

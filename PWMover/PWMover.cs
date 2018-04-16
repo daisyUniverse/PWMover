@@ -93,14 +93,14 @@ namespace PWMover
 
                     // Left Thumbstick Loop
 
-                    if (YP > 1)
+                    if (YP > wpfwindow.DZL.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_W);
                         Wait(YP);
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_W);
                         Wait(TimeUnit - YP);
                     }
-                    if (YP < -1)
+                    if (YP < -wpfwindow.DZL.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_S);
                         Wait(YP * -1);
@@ -108,14 +108,14 @@ namespace PWMover
                         Wait(TimeUnit - (YP * -1));
                     }
 
-                    if (XP > 1)
+                    if (XP > wpfwindow.DZL.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_D);
                         Wait(XP);
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_D);
                         Wait(TimeUnit - XP);
                     }
-                    if (XP < -1)
+                    if (XP < -wpfwindow.DZL.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_A);
                         Wait(XP * -1);
@@ -129,14 +129,14 @@ namespace PWMover
 
                     // Right Thumbstick Loop
 
-                    if (RXP > 1)
+                    if (RXP > wpfwindow.DZR.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.UP);
                         Wait(RXP);
                         sim.Keyboard.KeyUp(VirtualKeyCode.UP);
                         Wait(TimeUnit - RXP);
                     }
-                    if (RXP < -1)
+                    if (RXP < -wpfwindow.DZR.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.DOWN);
                         Wait(RXP * -1);
@@ -144,14 +144,14 @@ namespace PWMover
                         Wait(TimeUnit - (RXP * -1));
                     }
 
-                    if (RYP > 1)
+                    if (RYP > wpfwindow.DZR.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.RIGHT);
                         Wait(RYP);
                         sim.Keyboard.KeyUp(VirtualKeyCode.RIGHT);
                         Wait(TimeUnit - RYP);
                     }
-                    if (RYP < -1)
+                    if (RYP < -wpfwindow.DZR.Value)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.LEFT);
                         Wait(RYP * -1);
