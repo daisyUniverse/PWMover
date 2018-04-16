@@ -5,15 +5,23 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="PWMove" 
-        Height="450" 
-        Width="800" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225">
+        Height="342" 
+        Width="409" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225">
 
     <Grid>
         <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="145" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="431" VerticalAlignment="Top" Margin="0,0,0,-10"/>
-        <ProgressBar x:Name="XPlus" HorizontalAlignment="Left" Height="25" Margin="150,5,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" IsIndeterminate="True" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="XMinus" HorizontalAlignment="Left" Height="25" Margin="150,35,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="YPlus" HorizontalAlignment="Left" Height="26" Margin="150,64,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="YMinus" HorizontalAlignment="Left" Height="24" Margin="150,95,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="LXPlus" HorizontalAlignment="Left" Height="25" Margin="150,38,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="LXMinus" HorizontalAlignment="Left" Height="25" Margin="150,68,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="LYPlus" HorizontalAlignment="Left" Height="26" Margin="150,97,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="LYMinus" HorizontalAlignment="Left" Height="24" Margin="150,128,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RXPlus" HorizontalAlignment="Left" Height="25" Margin="151,193,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RXMinus" HorizontalAlignment="Left" Height="25" Margin="151,223,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RYPlus" HorizontalAlignment="Left" Height="26" Margin="151,252,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RYMinus" HorizontalAlignment="Left" Height="24" Margin="151,283,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <Label Content="Left Thumbstick" HorizontalAlignment="Left" Margin="19,10,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <Label Content="Right Thumbstick" HorizontalAlignment="Left" Margin="19,162,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <CheckBox x:Name="LeftDisable" Content="Disable" HorizontalAlignment="Left" Margin="151,16,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2"/>
+        <CheckBox x:Name="RightDisable" Content="Disable" HorizontalAlignment="Left" Margin="150,168,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2"/>
 
     </Grid>
 </Controls:MetroWindow>

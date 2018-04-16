@@ -54,7 +54,7 @@ namespace PWMover
                 ElementHost.EnableModelessKeyboardInterop(wpfwindow);
                 wpfwindow.Show();
 
-                while (true)
+            while (true)
                 {
 
                     XInputController controller = new XInputController();
@@ -63,15 +63,37 @@ namespace PWMover
 
                     var CLY = controller.leftThumb.Y;
                     var CLX = controller.leftThumb.X;
+                    var CRY = controller.rightThumb.Y;
+                    var CRX = controller.rightThumb.X;
+
                     int LY = Convert.ToInt32(CLY);
                     int LX = Convert.ToInt32(CLX);
+                    int RY = Convert.ToInt32(CRY);
+                    int RX = Convert.ToInt32(CRX);
 
                     Wait(1);
                     int TimeUnit = 100;
 
                     int YP = (int)Math.Round((double)(100 * LY) / TimeUnit);
-                    int XP = (int)Math.Round((double)(100 * LX) / TimeUnit);
+                    wpfwindow.LYPlus.Value = YP;
+                    wpfwindow.LYMinus.Value = YP * -1;
 
+                    int XP = (int)Math.Round((double)(100 * LX) / TimeUnit);
+                    wpfwindow.LXPlus.Value = XP;
+                    wpfwindow.LXMinus.Value = XP * -1;
+
+                    int RYP = (int)Math.Round((double)(100 * RY) / TimeUnit);
+                    wpfwindow.RYPlus.Value = RYP;
+                    wpfwindow.RYMinus.Value = RYP * -1;
+
+                    int RXP = (int)Math.Round((double)(100 * RX) / TimeUnit);
+                    wpfwindow.RXPlus.Value = RXP;
+                    wpfwindow.RXMinus.Value = RXP * -1;
+
+                if (wpfwindow.LeftDisable.IsChecked == false)
+                {
+
+                    // Left Thumbstick Loop
 
                     if (YP > 1)
                     {
@@ -80,7 +102,7 @@ namespace PWMover
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_W);
                         Wait(TimeUnit - YP);
                     }
-                    if (YP < 0)
+                    if (YP < -1)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_S);
                         Wait(YP * -1);
@@ -88,28 +110,66 @@ namespace PWMover
                         Wait(TimeUnit - (YP * -1));
                     }
 
-                    if (XP > 0)
+                    if (XP > 1)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_D);
                         Wait(XP);
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_D);
                         Wait(TimeUnit - XP);
                     }
-                    if (XP < 0)
+                    if (XP < -1)
                     {
                         sim.Keyboard.KeyDown(VirtualKeyCode.VK_A);
                         Wait(XP * -1);
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_A);
                         Wait(TimeUnit - XP * -1);
                     }
+                }
+
+                if (wpfwindow.RightDisable.IsChecked == false)
+                {
+
+                    // Right Thumbstick Loop
+
+                    if (RXP > 1)
+                    {
+                        sim.Keyboard.KeyDown(VirtualKeyCode.UP);
+                        Wait(RXP);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.UP);
+                        Wait(TimeUnit - RXP);
+                    }
+                    if (RXP < -1)
+                    {
+                        sim.Keyboard.KeyDown(VirtualKeyCode.DOWN);
+                        Wait(RXP * -1);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.DOWN);
+                        Wait(TimeUnit - (RXP * -1));
+                    }
+
+                    if (RYP > 1)
+                    {
+                        sim.Keyboard.KeyDown(VirtualKeyCode.RIGHT);
+                        Wait(RYP);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.RIGHT);
+                        Wait(TimeUnit - RYP);
+                    }
+                    if (RYP < -1)
+                    {
+                        sim.Keyboard.KeyDown(VirtualKeyCode.LEFT);
+                        Wait(RYP * -1);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.LEFT);
+                        Wait(TimeUnit - RYP * -1);
+                    }
+                }
+
+                if ( wpfwindow.IsLoaded == false ) { break; }
 
                 };
                 void Wait(int ms)
                 {
                     DateTime start = DateTime.Now;
                     while ((DateTime.Now - start).TotalMilliseconds < ms)
-                        System.Windows.Forms.Application.DoEvents();
-
+                    System.Windows.Forms.Application.DoEvents();
                 }
             }
         
