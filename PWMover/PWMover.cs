@@ -1,4 +1,5 @@
-﻿using SharpDX.XInput;
+﻿using MahApps.Metro;
+using SharpDX.XInput;
 using System;
 using System.Windows.Forms.Integration;
 using WindowsInput;
@@ -87,6 +88,11 @@ namespace PWMover
                     int RXP = (int)Math.Round((double)(100 * RX) / TimeUnit);
                     wpfwindow.RXPlus.Value = RXP;
                     wpfwindow.RXMinus.Value = RXP * -1;
+
+                    wpfwindow.DZLP.Value = wpfwindow.DZL.Value;
+                    wpfwindow.DZRP.Value = wpfwindow.DZR.Value;
+
+                    
 
                 if (wpfwindow.LeftDisable.IsChecked == false)
                 {
