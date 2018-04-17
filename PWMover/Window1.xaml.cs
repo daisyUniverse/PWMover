@@ -22,6 +22,11 @@ namespace WpfApplication
         {
             InitializeComponent();
         }
+
+        private void RRIGHT_Button_Copy1_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
     
 

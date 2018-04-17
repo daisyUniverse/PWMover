@@ -5,11 +5,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="PWMove" 
-        Height="400.333" 
-        Width="375" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225" Icon="pwmover_r4k_icon.ico" WindowButtonCommandsOverlayBehavior="HiddenTitleBar">
+        Height="525.833" 
+        Width="377" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225" Icon="pwmover_r4k_icon.ico" WindowButtonCommandsOverlayBehavior="HiddenTitleBar">
 
-    <Grid>
-        <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="101" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="396" VerticalAlignment="Top" Margin="0,0,0,-22"/>
+    <Grid Margin="0,0,0,5">
+        <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="105" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="507" VerticalAlignment="Top" Margin="0,0,0,-15"/>
         <ProgressBar x:Name="LYPlus" HorizontalAlignment="Left" Height="25" Margin="110,38,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <ProgressBar x:Name="LYMinus" HorizontalAlignment="Left" Height="25" Margin="110,68,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <ProgressBar x:Name="LXMinus" HorizontalAlignment="Left" Height="26" Margin="110,97,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
@@ -60,6 +60,33 @@
                 <Slider x:Name="RBPS" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="215" Margin="7,0,0,2" Maximum="100" FlowDirection="RightToLeft" Height="19"/>
             </Grid>
         </Expander>
+        <ProgressBar x:Name="RTProg" HorizontalAlignment="Left" Height="24" Margin="113,410,0,0" VerticalAlignment="Top" Width="248" Background="#FF2F3136" BorderBrush="#FF2F3136" Foreground="#FF212121"/>
+        <ProgressBar x:Name="LTProg" HorizontalAlignment="Left" Height="24" Margin="113,440,0,0" VerticalAlignment="Top" Width="248" Background="#FF2F3136" BorderBrush="#FF2F3136" Foreground="#FF212121"/>
+        <Label Content="Triggers" HorizontalAlignment="Left" Margin="26,374,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <Button x:Name="LT_Button" Content="R" HorizontalAlignment="Left" Margin="12,410,0,0" VerticalAlignment="Top" Width="82" Height="24" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC" Click="RRIGHT_Button_Copy1_Click"/>
+        <Button x:Name="RT_Button" Content="T" HorizontalAlignment="Left" Margin="12,440,0,0" VerticalAlignment="Top" Width="82" Height="24" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Label Content="Deadzone" HorizontalAlignment="Left" Margin="276,374,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <CheckBox x:Name="TrigDisable" Content="Disable" HorizontalAlignment="Left" Margin="110,380,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2" IsChecked="True"/>
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="132,376,0,0" VerticalAlignment="Top" Width="229" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+            <Grid Background="#FF2F3136" Margin="0,1" Width="216">
+                <Slider x:Name="DZT" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Margin="1,1,0,0" Maximum="100"/>
+            </Grid>
+
+        </Expander>
+        <Label Content="Boost" HorizontalAlignment="Left" Margin="299,466,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="113,468,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+            <Grid Background="#FF2F3136" Margin="0,0,0,1" Width="224">
+
+                <Slider x:Name="TBS" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="215" Margin="7,0,0,2" Maximum="100" FlowDirection="RightToLeft" Height="19"/>
+
+            </Grid>
+
+        </Expander>
+        <ProgressBar x:Name="TDZP" HorizontalAlignment="Left" Height="54" Margin="113,410,0,0" VerticalAlignment="Top" Width="248" Background="#00333337" BorderBrush="#00BCBCBC" Foreground="#FF212121" Opacity="0.5"/>
+        <ProgressBar x:Name="TBP" HorizontalAlignment="Left" Height="54" Margin="113,410,0,0" VerticalAlignment="Top" Width="248" Background="#00333337" BorderBrush="#00BCBCBC" Foreground="#FF485DE2" Opacity="0.5" FlowDirection="RightToLeft"/>
+        <Button x:Name="RRIGHT_Button_Copy1" Content="RCTRL" HorizontalAlignment="Left" Margin="12,469,0,-2" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+
 
 
 

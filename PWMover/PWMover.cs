@@ -1,6 +1,7 @@
 ﻿using MahApps.Metro;
 using SharpDX.XInput;
 using System;
+using System.Diagnostics;
 using System.Windows.Forms.Integration;
 using WindowsInput;
 using WindowsInput.Native;
@@ -64,11 +65,15 @@ namespace PWMover
                     var CLX = controller.leftThumb.X;
                     var CRY = controller.rightThumb.Y;
                     var CRX = controller.rightThumb.X;
+                    var CRT = controller.rightTrigger;
+                    var CLT = controller.leftTrigger;
 
                     int LY = Convert.ToInt32(CLY);
                     int LX = Convert.ToInt32(CLX);
                     int RY = Convert.ToInt32(CRY);
                     int RX = Convert.ToInt32(CRX);
+                    int LT = Convert.ToInt32(CLT);
+                    int RT = Convert.ToInt32(CRT);
 
                     Wait(1);
                     int TimeUnit = 100;
@@ -89,15 +94,54 @@ namespace PWMover
                     wpfwindow.RXPlus.Value = RXP;
                     wpfwindow.RXMinus.Value = RXP * -1;
 
+                    int RTP = (int)Math.Round((double)(39 * RT) / TimeUnit);
+                    wpfwindow.RTProg.Value = RTP;    
+
+                    int LTP = (int)Math.Round((double)(39 * LT) / TimeUnit);
+                    wpfwindow.LTProg.Value = LTP;
+
                     wpfwindow.DZLP.Value = wpfwindow.DZL.Value;
                     wpfwindow.DZRP.Value = wpfwindow.DZR.Value;
 
                     wpfwindow.LBP.Value = wpfwindow.LBPS.Value;
                     wpfwindow.RBP.Value = wpfwindow.RBPS.Value;
 
+                    wpfwindow.TBP.Value = wpfwindow.TBS.Value;
+                    wpfwindow.TDZP.Value = wpfwindow.DZT.Value;
+
                 if (wpfwindow.LUP_Button.IsPressed)
                 {
                     
+                }
+
+                if (wpfwindow.TrigDisable.IsChecked == false)
+                {
+
+                    //Trigger Loop
+
+                    if (RTP > (100 + (-wpfwindow.TBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.RCONTROL); };
+
+                    if (LTP > (100 + (-wpfwindow.TBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.RCONTROL); };
+
+                    if (RTP > wpfwindow.TDZP.Value)
+                    {
+                        Debug.WriteLine(RTP);
+                        sim.Keyboard.KeyDown(VirtualKeyCode.VK_R);
+                        Wait(RTP);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.VK_R);
+                        Wait(TimeUnit - RTP);
+                    }
+
+                    if (LTP > wpfwindow.TDZP.Value)
+                    {
+                        sim.Keyboard.KeyDown(VirtualKeyCode.VK_L);
+                        Wait(LTP);
+                        sim.Keyboard.KeyUp(VirtualKeyCode.VK_L);
+                        Wait(TimeUnit - LTP);
+                    }
+
+                    sim.Keyboard.KeyUp(VirtualKeyCode.RCONTROL);
+
                 }
 
                 if (wpfwindow.LeftDisable.IsChecked == false)
