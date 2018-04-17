@@ -92,12 +92,23 @@ namespace PWMover
                     wpfwindow.DZLP.Value = wpfwindow.DZL.Value;
                     wpfwindow.DZRP.Value = wpfwindow.DZR.Value;
 
+                    wpfwindow.LBP.Value = wpfwindow.LBPS.Value;
+                    wpfwindow.RBP.Value = wpfwindow.RBPS.Value;
+
+                if (wpfwindow.LUP_Button.IsPressed)
+                {
                     
+                }
 
                 if (wpfwindow.LeftDisable.IsChecked == false)
                 {
 
                     // Left Thumbstick Loop
+
+                    if (YP > (100 + (-wpfwindow.LBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT); };
+                    if (-YP > (100 + (-wpfwindow.LBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT); };
+                    if (XP > (100 + (-wpfwindow.LBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT); };
+                    if (-XP > (100 + (-wpfwindow.LBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.SHIFT); };
 
                     if (YP > wpfwindow.DZL.Value)
                     {
@@ -128,12 +139,20 @@ namespace PWMover
                         sim.Keyboard.KeyUp(VirtualKeyCode.VK_A);
                         Wait(TimeUnit - XP * -1);
                     }
+
+                    sim.Keyboard.KeyUp(VirtualKeyCode.SHIFT);
+
                 }
 
                 if (wpfwindow.RightDisable.IsChecked == false)
                 {
 
                     // Right Thumbstick Loop
+
+                    if (RYP > (100 + (-wpfwindow.RBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.CONTROL); };
+                    if (-RYP > (100 + (-wpfwindow.RBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.CONTROL); };
+                    if (RXP > (100 + (-wpfwindow.RBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.CONTROL); };
+                    if (-RXP > (100 + (-wpfwindow.RBP.Value))) { sim.Keyboard.KeyDown(VirtualKeyCode.CONTROL); };
 
                     if (RXP > wpfwindow.DZR.Value)
                     {
@@ -164,6 +183,9 @@ namespace PWMover
                         sim.Keyboard.KeyUp(VirtualKeyCode.LEFT);
                         Wait(TimeUnit - RYP * -1);
                     }
+
+                    sim.Keyboard.KeyUp(VirtualKeyCode.CONTROL);
+
                 }
 
                 if ( wpfwindow.IsLoaded == false ) { break; }

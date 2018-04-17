@@ -5,47 +5,64 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         Title="PWMove" 
-        Height="346.5" 
-        Width="377" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225" Icon="pwmover_r4k_icon.ico" WindowButtonCommandsOverlayBehavior="HiddenTitleBar">
+        Height="400.333" 
+        Width="375" WindowStartupLocation="CenterScreen" Background="#FF36393E" HorizontalAlignment="Center" VerticalAlignment="Center" ResizeMode="CanMinimize" EnableDWMDropShadow="True" TitleCaps="False" TitleCharacterCasing="Lower" TitleAlignment="Center" TitlebarHeight="20" WindowTitleBrush="#FF202225" Icon="pwmover_r4k_icon.ico" WindowButtonCommandsOverlayBehavior="HiddenTitleBar">
 
     <Grid>
-        <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="101" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="328" VerticalAlignment="Top" Margin="0,0,0,-7"/>
+        <Border BorderBrush="#FF2A2C31" BorderThickness="1" HorizontalAlignment="Left" Width="101" RenderTransformOrigin="0.5,0.5" Background="#FF2F3136" Height="396" VerticalAlignment="Top" Margin="0,0,0,-22"/>
         <ProgressBar x:Name="LYPlus" HorizontalAlignment="Left" Height="25" Margin="110,38,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <ProgressBar x:Name="LYMinus" HorizontalAlignment="Left" Height="25" Margin="110,68,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <ProgressBar x:Name="LXMinus" HorizontalAlignment="Left" Height="26" Margin="110,97,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <ProgressBar x:Name="LXPlus" HorizontalAlignment="Left" Height="24" Margin="110,128,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="RXPlus" HorizontalAlignment="Left" Height="25" Margin="111,193,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="RXMinus" HorizontalAlignment="Left" Height="25" Margin="111,223,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="RYMinus" HorizontalAlignment="Left" Height="26" Margin="111,252,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
-        <ProgressBar x:Name="RYPlus" HorizontalAlignment="Left" Height="24" Margin="111,283,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RXPlus" HorizontalAlignment="Left" Height="25" Margin="113,224,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RXMinus" HorizontalAlignment="Left" Height="25" Margin="113,254,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RYMinus" HorizontalAlignment="Left" Height="26" Margin="113,283,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
+        <ProgressBar x:Name="RYPlus" HorizontalAlignment="Left" Height="24" Margin="113,314,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF202225" Background="#FF2F3136" BorderBrush="#FF2F3136"/>
         <Label Content="Left" HorizontalAlignment="Left" Margin="37,4,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
-        <Label Content="Right" HorizontalAlignment="Left" Margin="31,156,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <Label Content="Right" HorizontalAlignment="Left" Margin="33,187,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
         <CheckBox x:Name="LeftDisable" Content="Disable" HorizontalAlignment="Left" Margin="110,10,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2"/>
-        <CheckBox x:Name="RightDisable" Content="Disable" HorizontalAlignment="Left" Margin="110,162,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2" IsChecked="True"/>
-        <Button Content="W" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="A" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="S" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="D" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="UP" HorizontalAlignment="Left" Margin="10,193,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="DOWN" HorizontalAlignment="Left" Margin="10,223,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="LEFT" HorizontalAlignment="Left" Margin="10,253,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
-        <Button Content="RIGHT" HorizontalAlignment="Left" Margin="10,283,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <CheckBox x:Name="RightDisable" Content="Disable" HorizontalAlignment="Left" Margin="110,193,0,0" VerticalAlignment="Top" Background="#FF36393E" BorderBrush="#FF8A8E94" Foreground="#FF99A2B2" BorderThickness="2" IsChecked="True"/>
+        <Button x:Name="LUP_Button" Content="W" HorizontalAlignment="Left" Margin="10,38,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="LDOWN_Buttton" Content="A" HorizontalAlignment="Left" Margin="10,68,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="LLEFT_Button" Content="S" HorizontalAlignment="Left" Margin="10,97,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="LRIGHT_Button" Content="D" HorizontalAlignment="Left" Margin="10,126,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="RUP_Button" Content="UP" HorizontalAlignment="Left" Margin="12,224,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="RDOWN_Button" Content="DOWN" HorizontalAlignment="Left" Margin="12,254,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="RLEFT_Button" Content="LEFT" HorizontalAlignment="Left" Margin="12,284,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="RRIGHT_Button" Content="RIGHT" HorizontalAlignment="Left" Margin="12,314,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
         <Label Content="Deadzone" HorizontalAlignment="Left" Margin="274,4,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
-        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="132,6,0,0" VerticalAlignment="Top" Width="227" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="132,6,0,0" VerticalAlignment="Top" Width="228" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
             <Grid Background="#FF2F3136" Margin="0,1" Width="216">
                 <Slider x:Name="DZL" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Margin="1,1,0,0" Maximum="100"/>
             </Grid>
         </Expander>
-        <Label Content="Deadzone" HorizontalAlignment="Left" Margin="274,156,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
-        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="132,158,0,0" VerticalAlignment="Top" Width="227" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+        <Label Content="Deadzone" HorizontalAlignment="Left" Margin="276,187,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="132,189,0,0" VerticalAlignment="Top" Width="229" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
             <Grid Background="#FF2F3136" Margin="0,1" Width="216">
                 <Slider x:Name="DZR" HorizontalAlignment="Left" VerticalAlignment="Top" Width="202" Margin="1,1,0,0" Maximum="100"/>
             </Grid>
         </Expander>
-        <ProgressBar x:Name="DZLP" HorizontalAlignment="Left" Height="114" Margin="110,38,0,0" VerticalAlignment="Top" Width="249" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Foreground="#FF212121"/>
-        <ProgressBar x:Name="DZRP" HorizontalAlignment="Left" Height="114" Margin="111,193,0,0" VerticalAlignment="Top" Width="248" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Foreground="#FF212121"/>
+        <ProgressBar x:Name="DZLP" HorizontalAlignment="Left" Height="114" Margin="110,38,0,0" VerticalAlignment="Top" Width="249" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Foreground="#FF212121" Opacity="0.5"/>
+        <ProgressBar x:Name="DZRP" HorizontalAlignment="Left" Height="114" Margin="113,224,0,0" VerticalAlignment="Top" Width="248" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Foreground="#FF212121" Opacity="0.5"/>
+        <Label Content="Boost" HorizontalAlignment="Left" Margin="297,155,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <Label Content="Boost" HorizontalAlignment="Left" Margin="299,343,0,0" VerticalAlignment="Top" Foreground="#FFB9BABC"/>
+        <ProgressBar x:Name="RBP" HorizontalAlignment="Left" Height="114" Margin="113,224,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF485DE2" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Opacity="0.5" FlowDirection="RightToLeft"/>
+        <ProgressBar x:Name="LBP" HorizontalAlignment="Left" Height="114" Margin="110,38,0,0" VerticalAlignment="Top" Width="249" Foreground="#FF485DE2" Background="#00E6E6E6" BorderBrush="#00BCBCBC" Opacity="0.5" FlowDirection="RightToLeft"/>
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="102,157,0,0" VerticalAlignment="Top" Width="258" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+            <Grid Background="#FF2F3136" Margin="0,1" Width="224">
+                <Slider x:Name="LBPS" HorizontalAlignment="Left" VerticalAlignment="Top" Width="222" Margin="1,1,-1,0" Maximum="100" FlowDirection="RightToLeft"/>
+            </Grid>
+        </Expander>
+        <Button x:Name="LRIGHT_Button_Copy" Content="SHIFT" HorizontalAlignment="Left" Margin="10,156,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Button x:Name="RRIGHT_Button_Copy" Content="CTRL" HorizontalAlignment="Left" Margin="12,344,0,0" VerticalAlignment="Top" Width="82" Height="25" Background="#FF212121" BorderBrush="#FF2F3136" Foreground="#FFB9BABC"/>
+        <Expander Header="" HorizontalAlignment="Left" Height="24" Margin="113,345,0,0" VerticalAlignment="Top" Width="248" Foreground="#FF8A8E94" ExpandDirection="Left" Controls:ControlsHelper.HeaderFontStretch="Condensed">
+            <Grid Background="#FF2F3136" Margin="0,0,0,1" Width="224">
+                <Slider x:Name="RBPS" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="215" Margin="7,0,0,2" Maximum="100" FlowDirection="RightToLeft" Height="19"/>
+            </Grid>
+        </Expander>
+
 
 
     </Grid>
-    
+
 </Controls:MetroWindow>
